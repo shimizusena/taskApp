@@ -24,7 +24,6 @@ class Task: Object {
     /**
      id をプライマリーキーとして設定
      
-     
      */
     
     override static func primaryKey() -> String? {

@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
+    
+    let realm = try! Realm ()
+    var taskArray = try!Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
        tableView.delegate = self
        tableView.dataSource = self
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
