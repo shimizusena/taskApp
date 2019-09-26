@@ -40,7 +40,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             searchBar.keyboardType = UIKeyboardType.default
             navigationItem.titleView = searchBar
             navigationItem.titleView?.frame = searchBar.frame
-            self.searchBar = searchBar
+//            self.searchBar = searchBar
         }
     }
     
